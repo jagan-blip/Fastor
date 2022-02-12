@@ -1,0 +1,44 @@
+.signup {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+}
+.signup {
+    margin-left: 30%;
+    text-decoration: none;
+   
+}
+.signup:hover {
+    color: rgb(247, 96, 9);
+}
+.otp {
+    justify-content: center;
+}
+.otp input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: blue;
+    border: 1px solid grey;
+    text-align: center;
+}
+
+.submit {
+    all: unset;
+    margin: 0% 2%;
+    color: rgb(255, 255, 255);
+    background-color: tomato;
+    
+    border-radius: 5px;
+    width: 100px; 
+    padding: 2% 2%;
+    text-align: center;
+}
+.submit:hover {
+    opacity: 0.7;
+}
+
+@media (max-width:600px){
+    .signup {
+        margin-left: 45%;
+    }
+}
