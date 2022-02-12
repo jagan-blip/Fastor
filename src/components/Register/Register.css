@@ -25,12 +25,12 @@
     z-index: -1;
     height: 100%;
 }
-.brand {
+.brandlogo {
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
 }
-.brand h1 {
+.brandlogo h1 {
     font-style: italic;
     color: white;
     -webkit-text-stroke-width: 2px;

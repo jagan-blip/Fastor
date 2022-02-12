@@ -131,7 +131,7 @@ const Login = () => {
     <div className="bg">
       <div className="bgimage"></div>
       <div className="registerform">
-        <div className="brand">
+        <div className="brandlogo">
           <img src={logo} className="logo"></img>
         </div>
         <Form>
