@@ -105,7 +105,7 @@ const Login = () => {
           icon: "error",
           iconColor: "white",
           color: "white",
-          background: "#4a5ece",
+          background: "#029aff",
 
           confirmButtonText: "ok",
           confirmButtonColor: "#2190ff",
@@ -120,7 +120,7 @@ const Login = () => {
         icon: "error",
         iconColor: "white",
         color: "white",
-        background: "#4a5ece",
+        background: "#029aff",
 
         confirmButtonText: "ok",
         confirmButtonColor: "#2190ff",

@@ -14,7 +14,7 @@ export const loginreq = createAsyncThunk("login/loginreq", async (obj) => {
   if (response.data.status === "Success") {
     const Toast = Swal.mixin({
       toast: true,
-      background: "#4a5ece",
+      background: "#029aff",
       iconColor: "white",
       color: "white",
       position: "top-end",
@@ -38,7 +38,7 @@ export const loginreq = createAsyncThunk("login/loginreq", async (obj) => {
       icon: "error",
       iconColor: "white",
       color: "white",
-      background: "#4a5ece",
+      background: "#029aff",
 
       confirmButtonText: "ok",
       confirmButtonColor: "#2190ff",
