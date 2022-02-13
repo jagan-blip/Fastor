@@ -29,6 +29,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
+
 }
 .brandlogo h1 {
     font-style: italic;
@@ -40,6 +41,8 @@
 .logo {
     width: 200px;
     height: 50px;
+    margin: auto;
+    margin-bottom: 3%;
     
 
 }
@@ -76,7 +79,7 @@ input[type=number] {
     
     border-radius: 5px;
     width: 100px; 
-    padding: 2% 2%;
+    padding: 1% 1%;
 
 }
 .btnn:hover {
@@ -87,7 +90,7 @@ input[type=number] {
     border-radius: 5px;
 }
 .phoneinput {
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 .PhoneInput {
@@ -100,7 +103,7 @@ input[type=number] {
     font-size: 16px;
 }
 .signin {
-    margin-left: 40%;
+    margin-left: 48%;
     text-decoration: none;
    
 }

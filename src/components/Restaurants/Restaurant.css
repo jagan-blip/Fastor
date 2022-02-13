@@ -1,0 +1,127 @@
+.cont {
+   height: 100vh;
+   background-color: rgb(255, 255, 255);
+   width: 90%;
+   margin: auto;
+   margin-top: 2%;
+   padding: 2%;
+   z-index: -1;
+   border-radius: 10px;
+   /* box-shadow: 5px 5px 5px grey; */
+ 
+}
+h1 {
+    color: rgb(245, 147, 0);
+    font-family: monospace;
+    border-bottom: 2px solid blue;
+    margin-right: 60%;
+    text-align: left;
+    
+}
+.col-desc {
+    text-align: left;
+    border-left: 2px solid grey;
+}
+.restaurantimg {
+    width: 300px;
+    border-radius: 20px;
+}
+.list {
+    background-color: rgb(245, 245, 245);
+    padding: 3%;
+    border-radius: 5px;
+    border: 1px solid rgb(212, 210, 210);
+    box-shadow: 0px 5px 6px -1px grey;
+    cursor: pointer;
+    
+}
+.Name {
+    font-weight: bold;
+    font-family: monospace;
+    margin-left: 10%;
+   
+}
+.description {
+    font-family: monospace;
+    margin-top: -1%;
+    margin-left: 10%;
+   
+
+}
+.location {
+    font-family: monospace;
+    margin-top: -3%;
+    margin-left: 10%;
+    
+}
+.offer {
+    font-family: monospace;
+    margin-left: 10%;
+  
+    margin-top: -2%;
+}
+.offer img {
+    width: 30px;
+}
+
+.popularity {
+    display: flex;
+   
+    margin-left: 10%;
+    margin-top: -1%;
+
+    
+}
+.popularity p {
+    margin-right: 5%;
+    font-family: monospace;
+}
+.subtext {
+    font-family: monospace;
+}
+@media (max-width:600px) {
+    .list {
+        padding-bottom: 0%;
+        padding-top: 5%;
+    }
+    .restaurantimg {
+        width: 150px;
+    }
+    .Name {
+        font-size: 15px;
+        margin-left: 16%;
+    }
+    .description {
+        font-size: 10px;
+        margin-top: -5%;
+       margin-left: 5%;
+    }
+    .location {
+        font-size: 7px;
+        margin-top: -7%;
+        margin-left: 18%;
+    }
+    .offer {
+        font-size: 10px;
+        margin-top: -6%;
+        margin-left: 10%;
+    }
+    .popularity {
+         font-size: 10px; 
+        font-family: monospace;
+        margin-top: -6%;
+        margin-left: 22%;
+    }
+    .subtext {
+       font-size: 7px; 
+    
+    }
+    .offer img {
+        width: 20px;
+        
+    }
+    .col-desc {
+        text-align: center;
+        border: none;
+    }
+}

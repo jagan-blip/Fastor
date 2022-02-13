@@ -5,8 +5,9 @@ import { NavDropdown, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [check, setCheck] = useState(false);
+  const name = window.sessionStorage.getItem("username");
   return (
-    <nav>
+    <nav className="sticky">
       <div className="menu">
         <input type="checkbox" id="check"></input>
         <div className="brand">
@@ -35,7 +36,7 @@ const Header = () => {
                   to="/login"
                   style={{ textDecoration: "none", color: "inherit" }}
                 ></Link>
-                User
+                {name}
               </Dropdown.Toggle>
 
               <Dropdown.Menu>

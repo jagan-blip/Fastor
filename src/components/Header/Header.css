@@ -10,7 +10,9 @@
     background: linear-gradient(to right,rgb(2, 154, 255),rgba(4, 49, 253, 0.781));
      margin: 0%;
      overflow: hidden;
-    z-index: -1;
+    
+   
+    
      
  }
 
@@ -48,7 +50,7 @@
 .items_1 > li:nth-child(2){
 position: absolute;
 right: 0%;
-margin-top: -10px;
+margin-top: -8px;
 
 cursor: pointer;
 }
@@ -62,13 +64,16 @@ li{
 }
 
 #logo {
-    height: 30px;
+   width: 100px;
+  margin-bottom: 5%;
     cursor: pointer;
 }
 .brand{
     display: flex;
     margin-left: 2%;
     cursor: pointer;
+   
+   
     
 }
 .brand h1 {
@@ -148,6 +153,9 @@ li{
             height: calc(100vh - 60vh);
            
             
+        }
+        #logo {
+            margin-bottom: 0% ;
         }
    
  }

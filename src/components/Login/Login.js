@@ -21,7 +21,7 @@ import { PhoneNumberMatcher } from "libphonenumber-js/core";
 import logo from "./fastorlogo.png";
 import "react-phone-number-input/style.css";
 import axios from "../../axios/axios";
-import "./Login.css";
+import style from "./Login.css";
 import { useNavigate } from "react-router-dom";
 import OTPInput, { ResendOTP } from "otp-input-react";
 import ModalHeader from "react-bootstrap/esm/ModalHeader";
@@ -61,6 +61,7 @@ const Login = () => {
         "refresh_token",
         loginstate.data.refresh_token
       );
+      window.sessionStorage.setItem("username", loginstate.data.user_name);
       //redirecting after login
       navigate("/home");
     }
@@ -101,7 +102,7 @@ const Login = () => {
       if (mobile.nationalNumber.length !== 10) {
         Swal.fire({
           title: "something went wrong!",
-          text: "Check mobile no",
+          text: "Enter valid mobile no",
           icon: "error",
           iconColor: "white",
           color: "white",
@@ -116,7 +117,7 @@ const Login = () => {
     } else {
       Swal.fire({
         title: "something went wrong!",
-        text: "Check mobile no",
+        text: "Enter valid mobile no",
         icon: "error",
         iconColor: "white",
         color: "white",
@@ -132,7 +133,11 @@ const Login = () => {
       <div className="bgimage"></div>
       <div className="registerform">
         <div className="brandlogo">
-          <img src={logo} className="logo"></img>
+          <img
+            src={logo}
+            className="logo"
+            style={{ marginBottom: "-2%" }}
+          ></img>
         </div>
         <Form>
           <FormGroup className="mb-3" controlId="formBasicNumber">
