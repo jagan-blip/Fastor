@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import { useSelector } from "react-redux";
 import logo from "./Fastor Logo.png";
 import Draggable, { DraggableCore } from "react-draggable";
-import Drag from "../draggable/drag";
+
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 const Details = () => {
