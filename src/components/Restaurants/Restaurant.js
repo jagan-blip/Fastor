@@ -58,7 +58,7 @@ const Restaurant = () => {
                         <div className="subtext">popularity</div>
                       </p>
                       <p>
-                        {item.currency.symbol}.{item.avg_cost_for_two}
+                        {item.currency.symbol} {item.avg_cost_for_two}
                         <div className="subtext">cost for two</div>
                       </p>
                     </div>
