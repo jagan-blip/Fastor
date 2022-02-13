@@ -54,11 +54,11 @@ const Restaurant = () => {
                     <div className="popularity">
                       <p>
                         <FontAwesomeIcon icon={faStar} />
-                        4.2
+                        {item.rating.restaurant_avg_rating}
                         <div className="subtext">popularity</div>
                       </p>
                       <p>
-                        Rs.200
+                        {item.currency.symbol}.{item.avg_cost_for_two}
                         <div className="subtext">cost for two</div>
                       </p>
                     </div>
