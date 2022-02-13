@@ -140,6 +140,7 @@ const Login = () => {
           ></img>
         </div>
         <Form>
+          <h2 style={{ color: "white" }}>Login</h2>
           <FormGroup className="mb-3" controlId="formBasicNumber">
             <PhoneInput
               className="phoneinput"
@@ -161,7 +162,7 @@ const Login = () => {
               validation();
             }}
           >
-            getOtp
+            Login
           </button>
 
           <Modal show={show} onHide={handleClose} className="modalotp">

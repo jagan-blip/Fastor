@@ -6,6 +6,7 @@ import styles from "./Restaurant.css";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { resetrestaurant, restaurantreq } from "./RestaurantSlice";
+import { useNavigate } from "react-router-dom";
 const Restaurant = () => {
   const Restaurants = useSelector((state) => state.restaurant.restaurantdata);
   let data = {
@@ -13,6 +14,7 @@ const Restaurant = () => {
   };
   console.log(Restaurants);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(restaurantreq(data));
   }, [dispatch]);
@@ -27,6 +29,10 @@ const Restaurant = () => {
               style={{ marginTop: "5%" }}
               className="list"
               key={item.restaurant_id}
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(`/details/${item.restaurant_id}`);
+              }}
             >
               <Row>
                 <Col xs={4}>
@@ -62,7 +68,7 @@ const Restaurant = () => {
             </div>
           ))
         ) : (
-          <div>Sorry for inconvenience ,No restaurants nearby</div>
+          <div>Loading...</div>
         )}
       </div>
     </div>

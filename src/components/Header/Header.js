@@ -24,7 +24,14 @@ const Header = () => {
         </div>
 
         <div className="items_1">
-          <li>Restaurants</li>
+          <li>
+            <Link
+              to="/home"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Restaurants
+            </Link>{" "}
+          </li>
 
           <li>
             <Dropdown>
@@ -32,10 +39,6 @@ const Header = () => {
                 id="dropdown-basic"
                 style={{ background: " none", border: "none" }}
               >
-                <Link
-                  to="/login"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                ></Link>
                 {name}
               </Dropdown.Toggle>
 

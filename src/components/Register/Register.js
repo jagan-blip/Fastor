@@ -20,7 +20,7 @@ import "react-phone-number-input/style.css";
 import axios from "../../axios/axios";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
-
+import Swal from "sweetalert2";
 const Register = () => {
   const [value, setValue] = useState("");
   const navigate = useNavigate();
@@ -43,6 +43,17 @@ const Register = () => {
     });
     console.log(response);
     if (response.data.status === "Success") {
+      Swal.fire({
+        title: "Registration successful",
+        text: "",
+        icon: "success",
+        iconColor: "white",
+        color: "white",
+        background: "#4a5ece",
+
+        confirmButtonText: "ok",
+        confirmButtonColor: "#2190ff",
+      });
       navigate("/login");
     }
   };
@@ -58,7 +69,38 @@ const Register = () => {
       registerReq(data);
     }
   };
+  const validation = () => {
+    const mobile = parsePhoneNumber(value);
+    if (mobile != null) {
+      if (mobile.nationalNumber.length !== 10) {
+        Swal.fire({
+          title: "something went wrong!",
+          text: "Enter valid mobile no",
+          icon: "error",
+          iconColor: "white",
+          color: "white",
+          background: "#029aff",
 
+          confirmButtonText: "ok",
+          confirmButtonColor: "#2190ff",
+        });
+      } else {
+        handlesubmit();
+      }
+    } else {
+      Swal.fire({
+        title: "something went wrong!",
+        text: "Enter valid mobile no",
+        icon: "error",
+        iconColor: "white",
+        color: "white",
+        background: "#029aff",
+
+        confirmButtonText: "ok",
+        confirmButtonColor: "#2190ff",
+      });
+    }
+  };
   return (
     <div className="bg">
       <div className="bgimage"></div>
@@ -67,6 +109,7 @@ const Register = () => {
           <img src={logo} className="logo"></img>
         </div>
         <Form>
+          <h2 style={{ color: "white" }}>Registration</h2>
           <FormGroup className="mb-3" controlId="formBasicNumber">
             <PhoneInput
               className="phoneinput"
@@ -85,7 +128,7 @@ const Register = () => {
             className="btnn"
             onClick={(e) => {
               e.preventDefault();
-              handlesubmit();
+              validation();
             }}
           >
             getOtp
